@@ -17,6 +17,18 @@ public class Pizza {
         takeaway=false;
         toppings=false;
     }
+    public Pizza(Boolean isVeg,boolean b){
+        this.isVeg = isVeg;
+        // your code goes here
+        if(isVeg)this.price=300;
+        else this.price=400;
+        cheese=true;
+        takeaway=false;
+        toppings=true;
+        price+=80;//cheese
+        if(isVeg)price+=70;
+        else price+=120;
+    }
 
     public int getPrice(){
         return this.price;
