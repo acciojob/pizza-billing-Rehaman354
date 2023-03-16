@@ -2,7 +2,7 @@ package com.driver;
 
 public class Pizza {
 
-    private int price;
+    private int price=0;
     private Boolean isVeg;
     private String bill;
     boolean cheese;
@@ -12,7 +12,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        if(isVeg)this.price=300;
+        if(this.isVeg)this.price=300;
         else this.price=400;
         cheese=false;
         takeaway=false;
