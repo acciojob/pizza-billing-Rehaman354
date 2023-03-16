@@ -9,6 +9,8 @@ public class Pizza {
     boolean takeaway;
     boolean toppings;
     boolean dp=false;
+    private boolean isbillgenerated=false;
+
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
@@ -75,12 +77,13 @@ public class Pizza {
             bill+="Extra Toppings Added: 120\n";
         if(this.takeaway)
               bill+="Paperbag Added: 20\n";
-        if(this.dp) {
+        if(this.dp && !this.isbillgenerated) {
             this.price += 80;//cheese
             if (this.isVeg) this.price += 70;
             else this.price += 120;
         }
              bill+="Total Price: "+this.price+"\n";
+        this.isbillgenerated=true;
         return this.bill;
 
     }
